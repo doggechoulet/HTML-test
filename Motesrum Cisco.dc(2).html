@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #f4f4f2; font-family: Barlow, Helvetica, Arial, sans-serif; color: #10222e; }
+  a { color: #0d5c63; text-decoration: none; }
+  a:hover { color: #10222e; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:0 20px 80px">
+
+  <header style="width:100%; max-width:1040px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 0 24px; border-bottom:1px solid #d9d9d4">
+    <img src="sim-logo.svg" alt="Simplify" style="height:38px; width:auto" />
+    <!-- Placeholder for customer logo -->
+    <div style="height:34px; width:180px"></div>
+  </header>
+
+  <div style="width:100%; max-width:1040px; padding:56px 0 40px">
+    <div style="font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#7b8a90; font-weight:600">Snabbguide</div>
+    <h1 style="margin:10px 0 0; font-size:clamp(40px,6vw,72px); line-height:1; font-weight:800; letter-spacing:-.02em">Mötesrum – Cisco</h1>
+  </div>
+
+  <nav style="width:100%; max-width:1040px; display:flex; flex-wrap:wrap; gap:10px; padding-bottom:48px">
+    <a href="#anslut" style="padding:10px 18px; border:1px solid #10222e; border-radius:999px; font-size:15px; font-weight:600; color:#10222e" style-hover="background:#10222e; color:#fff">Anslut till möte</a>
+    <a href="#byod" style="padding:10px 18px; border:1px solid #10222e; border-radius:999px; font-size:15px; font-weight:600; color:#10222e" style-hover="background:#10222e; color:#fff">BYOD</a>
+    <a href="#dela" style="padding:10px 18px; border:1px solid #10222e; border-radius:999px; font-size:15px; font-weight:600; color:#10222e" style-hover="background:#10222e; color:#fff">Dela innehåll</a>
+    <a href="#funktioner" style="padding:10px 18px; border:1px solid #10222e; border-radius:999px; font-size:15px; font-weight:600; color:#10222e" style-hover="background:#10222e; color:#fff">Funktioner i mötet</a>
+  </nav>
+
+  <section id="anslut" style="width:100%; max-width:1040px; display:flex; flex-direction:column; gap:48px; padding-bottom:72px">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start">
+      <div>
+        <h2 style="margin:0 0 18px; font-size:28px; font-weight:700; letter-spacing:-.01em">Starta och anslut till möte</h2>
+        <div style="font-size:16px; font-weight:700; margin-bottom:8px">Rekommenderat arbetssätt</div>
+        <ol style="margin:0; padding-left:22px; font-size:17px; line-height:1.6; color:#2b3b44">
+          <li>Skicka eller vidarebefordra mötesinbjudan till konferensrummet</li>
+          <li>5 minuter innan mötet startar visas en <strong>grön knapp (Anslut)</strong></li>
+          <li>Tryck på den för att ansluta</li>
+        </ol>
+      </div>
+      <img src="touchpanel-gronknapp.png" alt="Grön anslut-knapp på touchpanelen" style="display:block; width:100%; max-width:100%; height:auto; border-radius:12px; border:1px solid #e2e2dd" />
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start">
+      <div>
+        <h3 style="margin:0 0 10px; font-size:19px; font-weight:700">Anslut manuellt (om ingen grön knapp visas)</h3>
+        <ol style="margin:0; padding-left:22px; font-size:17px; line-height:1.6; color:#2b3b44">
+          <li>Tryck på <strong>Teams</strong> (för Teams-möten) eller <strong>Webex</strong> (för Webex-möten)</li>
+          <li>Ange mötesinformation från din inbjudan</li>
+          <li>Tryck på <strong>Anslut</strong></li>
+        </ol>
+      </div>
+      <img src="delta-i-teams.png" alt="Gå med i Microsoft Teams" style="display:block; width:100%; max-width:100%; height:auto; border-radius:12px; border:1px solid #e2e2dd" />
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start">
+      <div style="background:#fff; border:1px solid #e2e2dd; border-radius:14px; padding:24px">
+        <div style="font-size:16px; font-weight:700; margin-bottom:16px">Du hittar mötesinformation i din mötesinbjudan</div>
+        <div style="font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#7b8a90; font-weight:600; margin-bottom:14px">Exempel</div>
+        <div style="display:grid; gap:18px; font-size:16px; line-height:1.55; color:#2b3b44">
+          <div>
+            <div style="font-weight:700; color:#10222e">Mötesinformation för Teams</div>
+            <div><strong style="font-weight:600">Mötes-ID:</strong> 123 456 789 123 456</div>
+            <div><strong style="font-weight:600">Lösenord:</strong> XXXXXXXX</div>
+          </div>
+          <div>
+            <div style="font-weight:700; color:#10222e">Mötesinformation för Webex</div>
+            <div><strong style="font-weight:600">Mötesnummer:</strong> 123 456 789 123</div>
+            <div><strong style="font-weight:600">Videoadress:</strong> username@example.webex.com</div>
+          </div>
+        </div>
+      </div>
+      <img src="delta-i-webex.png" alt="Ange mötesinformation" style="display:block; width:100%; max-width:100%; height:auto; border-radius:12px; border:1px solid #e2e2dd" />
+    </div>
+  </section>
+
+  <section id="byod" style="width:100%; max-width:1040px; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; padding-bottom:72px; border-top:1px solid #d9d9d4; padding-top:56px">
+    <div>
+      <h2 style="margin:0 0 18px; font-size:28px; font-weight:700; letter-spacing:-.01em">BYOD</h2>
+      <ol style="margin:0; padding-left:22px; font-size:17px; line-height:1.6; color:#2b3b44">
+        <li>Om rummet är utrustat med USB-C kan du ansluta din egen dator</li>
+        <li>Anslut USB-C kabeln till din dator</li>
+        <li>Starta mötet på din dator</li>
+        <li>Välj konferensrummets kamera, mikrofon och högtalare i mötet</li>
+      </ol>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px">
+      <img src="byod-innan-webex.png" alt="BYOD-vy innan datorn ansluts" style="display:block; width:100%; max-width:100%; height:auto; border-radius:12px; border:1px solid #e2e2dd" />
+      <img src="byod-efter-webex.png" alt="BYOD-vy med ansluten dator" style="display:block; width:100%; max-width:100%; height:auto; border-radius:12px; border:1px solid #e2e2dd" />
+    </div>
+  </section>
+
+  <section id="dela" style="width:100%; max-width:1040px; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; padding-bottom:72px; border-top:1px solid #d9d9d4; padding-top:56px">
+    <div style="display:flex; flex-direction:column; gap:32px">
+      <h2 style="margin:0; font-size:28px; font-weight:700; letter-spacing:-.01em">Dela innehåll</h2>
+      <div>
+        <h3 style="margin:0 0 10px; font-size:19px; font-weight:700">Via kabel (rekommenderas)</h3>
+        <ol style="margin:0; padding-left:22px; font-size:17px; line-height:1.6; color:#2b3b44">
+          <li>Anslut USB-C eller HDMI till din dator</li>
+          <li>Tryck på <strong>Dela i möte</strong> på touchpanelen</li>
+        </ol>
+      </div>
+      <div>
+        <h3 style="margin:0 0 14px; font-size:19px; font-weight:700">Trådlöst (om tillgängligt)</h3>
+        <div style="display:grid; gap:20px">
+          <div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:6px">Miracast (Windows)</div>
+            <ol style="margin:0; padding-left:22px; font-size:17px; line-height:1.6; color:#2b3b44">
+              <li>Tryck på <strong>Windows + K</strong></li>
+              <li>Välj mötesrummet</li>
+              <li>Ange koden som visas på skärmen</li>
+            </ol>
+          </div>
+          <div>
+            <div style="font-weight:700; font-size:17px; margin-bottom:6px">AirPlay (Apple)</div>
+            <ol style="margin:0; padding-left:22px; font-size:17px; line-height:1.6; color:#2b3b44">
+              <li>Välj <strong>Skärmspegling</strong> på din enhet</li>
+              <li>Välj mötesrummet</li>
+              <li>Ange koden som visas på skärmen</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <p style="margin:0; font-style:italic; font-size:16px; line-height:1.55; color:#5c6b73">(OBS! AirPlay fungerar endast när din enhet är ansluten till samma nätverk som videosystemet.)</p>
+    </div>
+    <img src="delning-webex.png" alt="Dela-menyn på touchpanelen" style="display:block; width:100%; max-width:100%; height:auto; border-radius:12px; border:1px solid #e2e2dd" />
+  </section>
+
+  <section id="funktioner" style="width:100%; max-width:1040px; border-top:1px solid #d9d9d4; padding-top:56px">
+    <h2 style="margin:0 0 28px; font-size:28px; font-weight:700; letter-spacing:-.01em">Funktioner i mötet</h2>
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:28px 48px; padding-bottom:44px">
+      <div>
+        <div style="font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#7b8a90; font-weight:600; margin-bottom:10px">Ljud &amp; bild</div>
+        <div style="display:grid; gap:6px; font-size:17px; line-height:1.5; color:#2b3b44">
+          <div><strong>1. Ljud av:</strong> Slå av eller på mikrofonen</div>
+          <div><strong>2. Stoppa video:</strong> Slå av eller på kameran</div>
+          <div><strong>3. Volym:</strong> Justera ljudnivån</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#7b8a90; font-weight:600; margin-bottom:10px">Inställningar</div>
+        <div style="display:grid; gap:6px; font-size:17px; line-height:1.5; color:#2b3b44">
+          <div><strong>7. Mikrofoninställningar:</strong> Välj mikrofon</div>
+          <div><strong>8. Kamerainställningar:</strong> Ändra kameravy</div>
+          <div><strong>9. Egenbild:</strong> Visa eller flytta din egen bild</div>
+          <div><strong>10. Knappsats:</strong> Visa knappsatsen</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#7b8a90; font-weight:600; margin-bottom:10px">Presentation &amp; interaktion</div>
+        <div style="font-size:17px; line-height:1.5; color:#2b3b44"><strong>4. Dela:</strong> Dela innehåll i mötet</div>
+      </div>
+      <div>
+        <div style="font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#7b8a90; font-weight:600; margin-bottom:10px">Avsluta möte</div>
+        <div style="font-size:17px; line-height:1.5; color:#2b3b44"><strong>11. Lämna mötet:</strong> Avsluta mötet</div>
+      </div>
+      <div>
+        <div style="font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#7b8a90; font-weight:600; margin-bottom:10px">Deltagare &amp; visning</div>
+        <div style="display:grid; gap:6px; font-size:17px; line-height:1.5; color:#2b3b44">
+          <div><strong>5. Deltagare:</strong> Visa deltagarlistan</div>
+          <div><strong>6. Layout:</strong> Ändra hur mötet visas</div>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative; width:100%; max-width:840px">
+      <img src="motes-meny-teams.png" alt="Touchpanelens kontroller med numrering" style="display:block; width:100%; max-width:100%; height:auto; border-radius:12px; border:1px solid #e2e2dd" />
+      <div style="position:absolute; left:28.75%; top:27.4%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">1</div>
+      <div style="position:absolute; left:40.5%; top:27.4%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">2</div>
+      <div style="position:absolute; left:86.5%; top:90.8%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">3</div>
+      <div style="position:absolute; left:52.2%; top:27.4%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">4</div>
+      <div style="position:absolute; left:43%; top:59.3%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">5</div>
+      <div style="position:absolute; left:28.4%; top:59.3%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">6</div>
+      <div style="position:absolute; left:39.6%; top:76%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">7</div>
+      <div style="position:absolute; left:47.6%; top:76%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">8</div>
+      <div style="position:absolute; left:55.5%; top:76%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">9</div>
+      <div style="position:absolute; left:58.9%; top:59.3%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">10</div>
+      <div style="position:absolute; left:63.9%; top:27.4%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:#fff; color:#10222e; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center">11</div>
+    </div>
+    <p style="margin:14px 0 0; font-size:15px; font-style:italic; color:#5c6b73">Vissa funktioner kan variera beroende på mötestyp.</p>
+  </section>
+
+</div>
+
+</x-dc>
+</body>
+</html>
