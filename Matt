@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Widgetmatt</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; }
+  body {
+    background: #10222e;
+    color: #f4f4f2;
+    font-family: "Courier New", Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+  }
+  #wrap { width: 100%; height: 100%; display: flex; flex-direction: column; }
+  h1 {
+    font-size: clamp(11px, 3.2vmin, 22px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6fd3c7;
+    padding-bottom: 0.6em;
+    border-bottom: 1px solid #2b3b44;
+    flex: 0 0 auto;
+  }
+  #rows { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: space-around; }
+  .r { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5em; }
+  .k { font-size: clamp(9px, 2.6vmin, 18px); color: #9fb3bc; white-space: nowrap; }
+  .v { font-size: clamp(12px, 4.2vmin, 30px); font-weight: 700; color: #f4f4f2; white-space: nowrap; }
+  .big .v { color: #6fd3c7; }
+  #ua {
+    flex: 0 0 auto;
+    font-size: clamp(7px, 1.7vmin, 12px);
+    color: #7b8a90;
+    padding-top: 0.5em;
+    border-top: 1px solid #2b3b44;
+    word-break: break-all;
+    line-height: 1.3;
+    max-height: 22%;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1>Widgetmatt</h1>
+  <div id="rows">
+    <div class="r big"><span class="k">innerWidth &times; innerHeight</span><span class="v" id="inner">-</span></div>
+    <div class="r"><span class="k">clientWidth &times; clientHeight</span><span class="v" id="client">-</span></div>
+    <div class="r"><span class="k">visualViewport</span><span class="v" id="visual">-</span></div>
+    <div class="r"><span class="k">devicePixelRatio</span><span class="v" id="dpr">-</span></div>
+    <div class="r"><span class="k">screen</span><span class="v" id="screen">-</span></div>
+    <div class="r"><span class="k">bildforhallande</span><span class="v" id="ratio">-</span></div>
+  </div>
+  <div id="ua">-</div>
+</div>
+<script>
+(function () {
+  function t(id, val) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = val;
+  }
+  function matt() {
+    var iw = window.innerWidth, ih = window.innerHeight;
+    var d = document.documentElement;
+    t('inner', iw + ' \u00d7 ' + ih);
+    t('client', d.clientWidth + ' \u00d7 ' + d.clientHeight);
+    if (window.visualViewport) {
+      t('visual', Math.round(window.visualViewport.width) + ' \u00d7 ' + Math.round(window.visualViewport.height));
+    } else {
+      t('visual', 'saknas');
+    }
+    t('dpr', String(window.devicePixelRatio));
+    t('screen', screen.width + ' \u00d7 ' + screen.height);
+    t('ratio', ih ? (iw / ih).toFixed(2) + ' : 1' : '-');
+    t('ua', navigator.userAgent);
+  }
+  matt();
+  window.addEventListener('resize', matt);
+  window.addEventListener('orientationchange', matt);
+  setInterval(matt, 2000);
+})();
+</script>
+</body>
+</html>
