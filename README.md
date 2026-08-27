@@ -9,6 +9,7 @@ byggsteg – öppna dem direkt i webbläsaren eller lägg dem på valfri webbser
 | --- | --- |
 | `index.html` | Huvudsidan. **Helt fristående** – alla bilder ligger inbäddade som base64. Har en filmknapp som länkar till `guide-film.html`. |
 | `widget.html` | Den interaktiva RoomOS-widgeten med knappar. Självbärande. |
+| `widget-en.html` | Engelsk version av `widget.html`. Självbärande. |
 | `guide-film.html` | Den animerade guidefilmen. Självbärande. |
 | `originalbilder/` | Källbilder. **Laddas inte av någon sida.** Se nedan. |
 | `experiment/` | Testfiler som inte används skarpt. |
