@@ -10,6 +10,7 @@ byggsteg – öppna dem direkt i webbläsaren eller lägg dem på valfri webbser
 | `index.html` | Huvudsidan. **Helt fristående** – alla bilder ligger inbäddade som base64. Har en filmknapp som länkar till `guide-film.html`. |
 | `widget.html` | Den interaktiva RoomOS-widgeten med knappar. Självbärande. |
 | `widget-en.html` | Engelsk version av `widget.html`. Självbärande. |
+| `widget-amf-en.html` | Ny engelsk widget för AMF:s cowork-rum: videomöte via USB-C samt delning via kabel, AirPlay och Miracast. Självbärande. |
 | `guide-film.html` | Den animerade guidefilmen. Självbärande. |
 | `originalbilder/` | Källbilder. **Laddas inte av någon sida.** Se nedan. |
 | `experiment/` | Testfiler som inte används skarpt. |
