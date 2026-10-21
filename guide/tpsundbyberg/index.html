@@ -24,6 +24,14 @@
     h1 { font-size: 44px !important; }
     section[style*="grid-template-columns"], div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; gap: 18px !important; }
   }
+
+  /* Kraftigare text och linjer, ser bättre ut på touchpanelens skärm */
+  body { font-weight: 500; }
+  ol, p, [style*="font-size:16px"], [style*="font-size:17px"] { font-size: 20px !important; color: #10222e !important; font-weight: 500; }
+  strong, b { font-weight: 700; }
+  [style*="border:1px solid"] { border-width: 2px !important; }
+  [style*="border-top:1px solid"], [style*="border-bottom:1px solid"] { border-top-width: 2px !important; }
+  #dbg { position: fixed; right: 8px; bottom: 8px; background: #10222e; color: #fff; font: 600 16px/1.4 Helvetica, Arial, sans-serif; padding: 10px 14px; border-radius: 8px; z-index: 9; }
 </style>
 </head>
 <body>
@@ -233,5 +241,12 @@
   </section>
 
 </div>
+<script>
+if (/[?&]debug=1/.test(location.search)) {
+  var d = document.createElement('div'); d.id = 'dbg';
+  d.textContent = 'Fönster ' + innerWidth + ' x ' + innerHeight + ' | DPR ' + devicePixelRatio + ' | Skärm ' + screen.width + ' x ' + screen.height;
+  document.body.appendChild(d);
+}
+</script>
 </body>
 </html>
